@@ -19,11 +19,11 @@ de mais nenhuma biblioteca para automatização(ex.: gulp, grunt, etc...)
 
 ### Run
 
- Após a instalação das dependências usar o comando ng serve do angular-cli para subir a aplicação.
+ Após a instalação das dependências usar o comando ng serve do angular-cli para subir a aplicação no
+ enredeço http://localhost:4200/.
  caso não tenha o angular-cli instalado: <br />
  npm install -g @angular/cli
  <br /> <br />
  Senhas dos usuários padrões:<br />
  login: admin e senha: 123456 <br />
  login: normaluser e senha: 123456
- 
