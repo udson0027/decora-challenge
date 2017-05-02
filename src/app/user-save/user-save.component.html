@@ -1,0 +1,27 @@
+<div fxLayout="column">
+  <h2>Adicionar novo usuário</h2>
+  <form fxLayout="column" fxLayoutAlign="space-between" #form="ngForm" (ngSubmit)="submitForm(form)">
+    <md-input-container>
+      <input mdInput placeholder="Name" name="name" ngModel required/>
+    </md-input-container>
+
+    <md-input-container>
+      <input mdInput type="email" placeholder="Email" name="email" ngModel/>
+    </md-input-container>
+
+    <md-input-container>
+      <input mdInput type="password" placeholder="Senha" name="password" ngModel required/>
+    </md-input-container>
+    <div>
+      <span>Admin</span>
+      <input type="checkbox" placeholder="Administrador" name="admin" ngModel/>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+        <button md-button type="submit" class="md-info" (click)="dialogRef.close()">Sair</button>
+        <button md-button type="submit" class="md-primary">Salvar</button>
+    </div>
+    <div *ngIf="showSuccess" fxLayout="row" fxLayoutAlign="center center">
+      <span  class="md-success">Usuário salvo com sucesso!</span>
+    </div>
+  </form>
+</div>

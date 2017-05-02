@@ -1,0 +1,23 @@
+<div fxLayout="column" fxFlex="50" fxFlexOffset="23">
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <h2>Lista de usuários</h2>
+    <div *ngIf="currentUser.admin">
+      <button md-button class="md-success" (click)="openDialog()">Novo</button>
+    </div>
+  </div>
+
+  <div fxLayout="column" fxLayoutAlign="space-between stretch">
+    <md-input-container>
+      <input mdInput type="text" placeholder="Digite o nome do usuário" [(ngModel)]="filterString">
+    </md-input-container>
+    <div  fxLayout="row" class="cs-item" fxLayoutAlign="space-between center" *ngFor="let user of (users | filter: filterString)">
+      {{user.name}}
+      <button md-button *ngIf="currentUser.admin"
+              [routerLink]="['/edit/', user.id.toString()]"
+              [routerLinkActive]="['router-link-active']"
+              [routerLinkActiveOptions]="{exact:true}">Editar
+      </button>
+    </div>
+  </div>
+</div>
+

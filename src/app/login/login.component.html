@@ -1,0 +1,16 @@
+<div fxLayout="column" fxLayoutAlign="space-between stretch" fxFlex="30" fxFlexOffset="34" >
+  <h2>Login</h2>
+
+  <md-input-container>
+    <input mdInput placeholder="Nome" type="text" [(ngModel)]="username"/>
+  </md-input-container>
+
+  <md-input-container>
+    <input mdInput type="password" placeholder="Senha" [(ngModel)]="password"/>
+  </md-input-container>
+  <div *ngIf="showError" fxLayout="column" fxLayoutAlign="space-between stretch">
+    <span  class="md-danger">Usuário ou senha inválido(a)!</span>
+  </div>
+  <button md-button class="md-success cs-margin-top" type="submit" (click)="login()"> Logar </button>
+</div>
+

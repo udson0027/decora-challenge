@@ -1,0 +1,6 @@
+<h1 md-dialog-title>Excluir</h1>
+<div md-dialog-content>Realmente deseja excluir esse usuário?</div>
+<div md-dialog-actions fxLayout="row" fxLayoutAlign="space-between center">
+  <button md-button class="md-info" (click)="dialogRef.close(false)">Não</button>
+  <button md-button class="md-danger" (click)="dialogRef.close(true)">Sim</button>
+</div>

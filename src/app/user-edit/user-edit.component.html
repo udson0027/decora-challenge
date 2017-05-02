@@ -1,0 +1,29 @@
+<div fxLayout="column" fxFlex="50" fxFlexOffset="23">
+  <div fxLayout="column" fxLayoutAlign="space-between stretch">
+    <h2>Editar usuário</h2>
+    <md-input-container>
+      <input mdInput placeholder="Nome" [(ngModel)]="user.name"/>
+    </md-input-container>
+
+    <md-input-container>
+      <input mdInput type="email" placeholder="Email" [(ngModel)]="user.email"/>
+    </md-input-container>
+
+    <md-input-container>
+      <input mdInput type="password" placeholder="Senha" [(ngModel)]="user.password"/>
+    </md-input-container>
+    <div>
+      <span>Admin</span>
+      <input type="checkbox" placeholder="Administrador" [(ngModel)]="user.admin"/>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <button md-button class="md-info" [routerLink]="['/']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Voltar</button>
+      <div fxLayout="row" fxFlex="20" fxLayoutAlign="space-between center">
+        <button  md-button class="md-danger" (click)="delete(user)">Excluir</button>
+        <button  md-button class="md-primary" (click)="update(user)">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
